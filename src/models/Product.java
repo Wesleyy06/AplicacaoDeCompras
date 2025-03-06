@@ -1,8 +1,8 @@
 package models;
 
 public class Product {
-    String name;
-    double value;
+    private String name;
+    private double value;
 
     public Product(String name, double value) {
         this.name = name;
@@ -10,11 +10,11 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public double getValue() {
-        return value;
+        return this.value;
     }
 
 

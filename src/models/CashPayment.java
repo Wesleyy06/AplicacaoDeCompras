@@ -13,9 +13,9 @@ public class CashPayment extends User implements Payment{
 
     @Override
     public void payMent(Product amount) {
-        if(moneyInWalllet < amount.value) {
+        if(moneyInWalllet < amount.getValue()) {
             System.out.println("Saldo insuficiente na carteira para efeutar a compra.");
         }
-        this.moneyInWalllet -= amount.value;
+        this.moneyInWalllet -= amount.getValue();
     }
 }
