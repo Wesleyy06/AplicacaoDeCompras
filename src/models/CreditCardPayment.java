@@ -1,6 +1,6 @@
 package models;
 
-public class CreditCard extends User{
+public class CreditCardPayment extends User{
     private String cardNumber;
     private double creditLimit;
     private double limitUsed;
