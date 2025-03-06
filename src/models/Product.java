@@ -16,5 +16,7 @@ public class Product {
     public double getValue() {
         return value;
     }
+
+
 }
 
