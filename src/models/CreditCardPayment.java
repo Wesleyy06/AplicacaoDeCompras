@@ -4,8 +4,17 @@ public class CreditCardPayment extends User implements Payment{
     private String cardNumber;
     private double creditLimit;
 
-    public CreditCardPayment(String cardNumber) {
+    public CreditCardPayment(String name, String cpf, String cardNumber) {
+        super(name, cpf);
         this.cardNumber = cardNumber;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public double getCreditLimit() {
+        return creditLimit;
     }
 
     @Override
