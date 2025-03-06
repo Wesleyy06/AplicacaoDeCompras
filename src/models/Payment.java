@@ -1,5 +1,5 @@
 package models;
 
 public interface Payment {
-    public void payMent(double amount);
+    public void payMent(Product amount);
 }

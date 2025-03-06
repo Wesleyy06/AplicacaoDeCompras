@@ -1,12 +1,17 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CreditCardPayment extends User implements Payment{
     private String cardNumber;
     private double creditLimit;
+    private List<Product> buyList;
 
     public CreditCardPayment(String name, String cpf, String cardNumber) {
         super(name, cpf);
         this.cardNumber = cardNumber;
+        this.buyList = new ArrayList<>();
     }
 
     public String getCardNumber() {
@@ -18,10 +23,10 @@ public class CreditCardPayment extends User implements Payment{
     }
 
     @Override
-    public void payMent(double amount) {
-        if(creditLimit < amount) {
+    public void payMent(Product amount) {
+        if(creditLimit < amount.value) {
             System.out.println("Não foi possivel realizar a transação: limite do cartão insuficiente.");
         }
-        this.creditLimit -= amount;
+        this.creditLimit -= amount.value;
     }
 }
