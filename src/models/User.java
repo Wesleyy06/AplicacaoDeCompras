@@ -9,4 +9,16 @@ public class User {
         this.name = name;
         this.cpf = cpf;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
 }
