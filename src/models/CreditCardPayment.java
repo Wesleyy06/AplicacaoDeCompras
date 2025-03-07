@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class CreditCardPayment extends User implements Payment{
@@ -28,5 +29,7 @@ public class CreditCardPayment extends User implements Payment{
             System.out.println("Não foi possivel realizar a transação: limite do cartão insuficiente.");
         }
         this.creditLimit -= amount.getValue();
+        buyList.sort(Comparator.comparing(Product::getValue));
+        buyList.add(amount);
     }
 }
