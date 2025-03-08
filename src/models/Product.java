@@ -17,6 +17,9 @@ public class Product {
         return this.value;
     }
 
-
+    @Override
+    public String toString() {
+        return "nome: " + name + "\nValor: R$" + value;
+    }
 }
 
